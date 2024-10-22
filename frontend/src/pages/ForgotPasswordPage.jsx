@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuthStore } from "../store/authStore";
-import Input from "../components/input";
+import Input from "../components/Input";
 import { ArrowLeft, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
