@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaUserCircle } from 'react-icons/fa'; // Import the user icon
-import { useAuthStore } from '../store/authStore'; // Adjust the import path if necessary
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaUserCircle } from 'react-icons/fa'; 
+import { useAuthStore } from '../store/authStore'; 
 
 const Navbar = () => {
-    const { isAuthenticated } = useAuthStore(); // Get authentication status
-    const navigate = useNavigate(); // To programmatically navigate
+    const { isAuthenticated } = useAuthStore(); 
+    const navigate = useNavigate(); 
 
     const handleGetStartedClick = () => {
         if (isAuthenticated) {
-            navigate('/get-treatment'); // Navigate to Get Treatment page if logged in
+            navigate('/get-treatment'); 
         } else {
-            navigate('/login'); // Navigate to Login page if not logged in
+            navigate('/login'); 
         }
     };
 

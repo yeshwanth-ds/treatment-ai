@@ -4,17 +4,17 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import FAQ from '../components/FAQ';
 import logo from '../assets/logo.png';
-import { useAuthStore } from '../store/authStore'; // Adjust the import path if necessary
+import { useAuthStore } from '../store/authStore'; 
 
 const HomePage = () => {
-    const { isAuthenticated } = useAuthStore(); // Get authentication status
-    const navigate = useNavigate(); // To programmatically navigate
+    const { isAuthenticated } = useAuthStore(); 
+    const navigate = useNavigate(); 
 
     const handleGetStartedClick = () => {
         if (isAuthenticated) {
-            navigate('/get-treatment'); // Navigate to Get Treatment page if logged in
+            navigate('/get-treatment'); 
         } else {
-            navigate('/login'); // Navigate to Login page if not logged in
+            navigate('/login'); 
         }
     };
 

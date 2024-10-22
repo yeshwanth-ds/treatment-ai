@@ -1,7 +1,7 @@
 import React from "react";
-import { Check, X } from "lucide-react"; // Icons for criteria check
+import { Check, X } from "lucide-react"; 
 
-// Component to display password criteria
+
 const PasswordCriteria = ({ password }) => {
 	const criteria = [
 		{ label: "At least 6 characters", met: password.length >= 6 },
@@ -16,9 +16,9 @@ const PasswordCriteria = ({ password }) => {
 			{criteria.map((item) => (
 				<div key={item.label} className='flex items-center text-xs'>
 					{item.met ? (
-						<Check className='w-4 h-4 text-[#00F260] mr-2' /> // Green check icon for met criteria
+						<Check className='w-4 h-4 text-[#00F260] mr-2' /> 
 					) : (
-						<X className='w-4 h-4 text-[#005C97] mr-2' /> // Blue X icon for unmet criteria
+						<X className='w-4 h-4 text-[#005C97] mr-2' /> 
 					)}
 					<span className={item.met ? "text-[#00F260]" : "text-[#005C97]"}>
 						{item.label}
@@ -29,9 +29,8 @@ const PasswordCriteria = ({ password }) => {
 	);
 };
 
-// Component to measure and display password strength
 const PasswordStrengthMeter = ({ password }) => {
-	// Function to calculate password strength
+	
 	const getStrength = (pass) => {
 		let strength = 0;
 		if (pass.length >= 6) strength++; // Check for minimum length
@@ -43,7 +42,7 @@ const PasswordStrengthMeter = ({ password }) => {
 
 	const strength = getStrength(password);
 
-	// Function to determine the color based on strength
+	
 	const getColor = (strength) => {
 		if (strength === 0) return "bg-gradient-to-r from-[#005C97] to-[#005C97]"; // Very Weak (blue)
 		if (strength === 1) return "bg-gradient-to-r from-[#007B9F] to-[#009DAE]"; // Weak (light blue)

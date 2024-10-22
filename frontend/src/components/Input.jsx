@@ -12,7 +12,7 @@ const Input = ({ icon: Icon, ...props }) => {
 				className='w-full pl-10 pr-3 py-2 rounded-lg border border-gray-300 transition duration-200
 					bg-[#005C97] text-white placeholder-white focus:border-[#00F260] 
 					focus:ring-2 focus:ring-[#00F260]'
-				placeholder={props.placeholder} // Ensure placeholder is displayed correctly
+				placeholder={props.placeholder} 
 			/>
 		</div>
 	);

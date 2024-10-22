@@ -36,8 +36,8 @@ function App() {
     checkAuth(); 
   }, [checkAuth]);
 
-  // Removed loading spinner check and return
-  if (isCheckingAuth) return null; // You can return null or a placeholder if needed
+  
+  if (isCheckingAuth) return null; 
 
   return (
     <div className='min-h-screen flex flex-col'>
@@ -48,8 +48,6 @@ function App() {
         <Route path='/contact-us' element={<ContactUsPage />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/terms-of-service' element={<TermasAndConditions />} />
-    
-        
         <Route path='/dashboard' element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
         <Route path='/signup' element={<RedirectAuthenticatedUser><SignUpPage /></RedirectAuthenticatedUser>} />
         <Route path='/login' element={<RedirectAuthenticatedUser><LoginPage /></RedirectAuthenticatedUser>} />

@@ -10,7 +10,7 @@ const GetTreatmentPage = () => {
     const [error, setError] = useState('');
     const [displayText, setDisplayText] = useState([]);
     const [isTyping, setIsTyping] = useState(false);
-    const { getTreatment } = useAuthStore(); // Destructure getTreatment from authStore
+    const { getTreatment } = useAuthStore(); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -21,7 +21,7 @@ const GetTreatmentPage = () => {
         setIsTyping(false);
 
         try {
-            const response = await getTreatment(symptom); // Call getTreatment with symptom
+            const response = await getTreatment(symptom); 
             if (response.success) {
                 setTreatmentData(response.data);
                 simulateTypingEffect(response.data);
@@ -89,7 +89,7 @@ const GetTreatmentPage = () => {
                         <button
                             type="submit"
                             className="bg-[#00F260] text-[#005C97] py-2 px-3 rounded-lg font-semibold w-32 hover:bg-[#005C97] hover:text-white transition duration-300 shadow-md transform hover:scale-105"
-                            disabled={loading} // Disable button while loading
+                            disabled={loading} 
                         >
                             {loading ? 'Loading...' : 'Get Treatment'}
                         </button>
