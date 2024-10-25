@@ -59,6 +59,9 @@ To run this project locally, follow these steps:
    NODE_ENV=development
    GEMINI_API_KEY=your_gemini_api_key
    CLIENT_URL=http://localhost:5173
+   USER=demo_user@example.com
+   APP_PASSWORD=demo_password  
+
    ```
 
 3. **Install dependencies**:
